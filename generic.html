@@ -9,7 +9,286 @@
 		<title>Generic Page - Massively by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.image.page1 {
+				display: block;
+				margin: 4rem 0;
+				width: 100%;
+			}
+			
+			.image.page1:first-child {
+				margin-top: 0;
+			}
+			
+			.image.page1 img {
+				width: 100%;
+			}
+			
+			@media screen and (max-width: 736px) {
+				.image.fit {
+					margin: 2rem 0;
+				}
+			
+				.image.page1 {
+					margin: 2rem 0;
+				}
+			}
+			
+			a.image {
+				overflow: hidden;
+			}
+			
+			a.image img {
+				transition: transform 0.2s ease-out;
+			}
+			
+			a.image:hover img {
+				transform: scale(1.05);
+			}
+			
+			#page1 {
+				background-color: #ffffff;
+				position: relative;
+				margin: 0 auto;
+				width: calc(100% - 4rem);
+				max-width: 72rem;
+				z-index: 2;
+			}
+			
+			#page1 > * {
+				padding: 4rem 4rem 2rem 4rem;
+				border-top: solid 2px #eeeeee;
+				margin: 0;
+			}
+			
+			#page1 > *:first-child {
+				border-top: 0;
+			}
+			
+			#page1 > footer {
+				text-align: center;
+			}
+			
+			#page1 > .post {
+				padding: 8rem 8rem 6rem 8rem;
+			}
+			
+			#page1 > .post header.major > .date {
+				margin-top: -2rem;
+			}
+			
+			#page1 > .post header.major > h1, 
+			#page1 > .post header.major h2 {
+				font-size: 4rem;
+				line-height: 1.1;
+				margin: 0 0 2rem 0;
+			}
+			
+			@media screen and (max-width: 1280px) {
+				#page1 > .post {
+					padding: 6rem 4rem 4rem 4rem;
+				}
+			}
+			
+			@media screen and (max-width: 736px) {
+				#page1 > .post {
+					padding: 4rem 2rem 2rem 2rem;
+				}
+				
+				#page1 > .post header.major > .date {
+					margin-top: -1rem;
+					margin-bottom: 2rem;
+				}
+				
+				#page1 > .post header.major > h1, 
+				#page1 > .post header.major h2 {
+					font-size: 2.5rem;
+					line-height: 1.2;
+					margin: 0 0 1.5rem 0;
+				}
+			}
+			
+			@media screen and (max-width: 480px) {
+				#page1 {
+					width: 100%;
+				}
+			}
+
+         /* PAGE 5 */
+	.image.page5 {
+		display: block;
+				margin: 4rem 0;
+				width: 100%;
+        }
+
+        
+        .image.page5:first-child {
+            margin-top: 0;
+        }
+
+      
+        .image.page5 img {
+            width: 100%;
+        }
+     
+        @media screen and (max-width: 736px) {
+            
+            .image.page5 {
+                margin: 2rem 0;
+            }
+        }
+
+        a.image {
+            overflow: hidden;
+        }
+
+        a.image img {
+            transition: transform 0.2s ease-out;
+        }
+
+     
+        a.image:hover img {
+            transform: scale(1.05);
+        }
+
+      
+        #page5 {
+            background-color: #ffffff;
+            position: relative;
+            margin: 0 auto;
+            width: calc(100% - 4rem);
+            max-width: 72rem;
+            z-index: 2;
+        }
+
+       
+		#page5 > * {
+    padding: 8rem 8rem 6rem 8rem; /* Match #page1 padding */
+    border-top: solid 2px #eeeeee;
+    margin: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    #page5 > * {
+        padding: 6rem 4rem 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    #page5 > * {
+        padding: 4rem 2rem 2rem 2rem;
+    }
+}
+
+      
+        #page5 > *:first-child {
+            border-top: 0;
+        }
+
+   
+        #page5 > footer {
+            text-align: center;
+        }
+
+      
+        .hidden {
+            display: none;
+        }
+
+      
+        .image.main img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+		
+     /* PAGE 6 */
+	 .image.page6 {
+		display: block;
+		margin: 4rem 0;
+		width: 100%;
+    }
+
+    .image.page6:first-child {
+        margin-top: 0;
+    }
+
+    .image.page6 img {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 736px) {
+        .image.page6 {
+            margin: 2rem 0;
+        }
+    }
+
+    a.image {
+        overflow: hidden;
+    }
+
+    a.image img {
+        transition: transform 0.2s ease-out;
+    }
+
+    a.image:hover img {
+        transform: scale(1.05);
+    }
+
+    #page6 {
+        background-color: #ffffff;
+        position: relative;
+        margin: 0 auto;
+        width: calc(100% - 4rem);
+        max-width: 72rem;
+        z-index: 2;
+    }
+
+	#page6 > * {
+        padding: 8rem 8rem 6rem 8rem; 
+        border-top: solid 2px #eeeeee;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 1280px) {
+        #page6 > * {
+            padding: 6rem 4rem 4rem 4rem;
+        }
+    }
+
+    @media screen and (max-width: 736px) {
+        #page6 > * {
+            padding: 4rem 2rem 2rem 2rem;
+        }
+    }
+
+    #page6 > *:first-child {
+        border-top: 0;
+    }
+
+    #page6 > footer {
+        text-align: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .image.main img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+			.hidden {
+			display: none;
+		}
+			</style>
+			
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -37,46 +316,146 @@
 						</ul>
 					</nav>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Post -->
+				<!-- Main or page 1-->
+					<!-- Content Sections -->
+						<div id="main" class="page-section">
 							<section class="post">
 								<header class="major">
 									<span class="date"></span>
-									<h1>RIZAL'S LEGACY:<br/>
-									MASTERPIECES THAT SHAPED A NATION</h1>
+									<h1>RIZAL WORKS:<br/> MASTERPIECES THAT SHAPED A NATION</h1>
 									<p>Through his cultural and educational experiences, Rizal demonstrated to the<br />
 										Filipino people and the rest of the world what a nation deserves and how to<br />
 										address inequity.</p>
 								</header>
 								<div class="image main"><img src="elfili.jpg" alt="" /></div>
-								<h1>Novels</h1>
-								<p>Noli Me Tangere (1887) - Starting with Jose Rizal's first novel, this novel written in Spanish, discusses unfair practices in the law and in society, discrimination against native Filipinos, the shortcomings in the colonial administrative system in the late 19th century, and the treatment of the residents by the ruling government and Spanish Catholic friars.</p>
-								<p> The story of Noli Me Tangere focuses on Crisóstomo Ibarra, a young, ambitious Filipino who returned to the Philippines after studying in Europe. Upon his arrival, he seeks to bring positive changes to his country by strengthening education. However, he quickly learns the severe corruption and abuses of Spanish friars and government officials. Ibarra's father, Don Rafael Ibarra, was falsely accused of infidelity and died in prison while under the control of Padre Damaso, a prominent and unethical priest. Determined to carry on his father's legacy, Ibarra intends to create an educational institution to educate Filipinos, thinking that knowledge leads the way toward change.</p>
-								<p> Recognizing that María Clara is in fact Padre Damaso's illegitimate daughter complicates his love for the lovely and faithful woman. María Clara struggles with balancing her responsibilities to the church with her love for Ibarra. Ibarra gains more knowledge about the injustices that the people face with the support of Elias, a mystery revolutionary. However, he gets accused of rebellion and nearly killed because of a plot against him. With Elias' assistance, Ibarra manages to escape after María Clara is compelled to enter a convent, but he is believed to be dead.</p>
-							</section>
-
-					</div>
+								<h1 class="text-4xl font-bold mt-8">Novels</h1>
 							
-				<!-- Main -->
-				<div id="main">
+								<p class="mt-3"><span class="font-bold">Noli Me Tangere (1887)</span> - Starting with Jose Rizal's first novel, this novel written in Spanish, discusses unfair practices in the law and in society, discrimination against native Filipinos, the shortcomings in the colonial administrative system in the late 19th century, and the treatment of the residents by the ruling government and Spanish Catholic friars.</p>
+								<p class="mt-3"> The story of Noli Me Tangere focuses on Crisóstomo Ibarra, a young, ambitious Filipino who returned to the Philippines after studying in Europe. Upon his arrival, he seeks to bring positive changes to his country by strengthening education. However, he quickly learns the severe corruption and abuses of Spanish friars and government officials. Ibarra's father, Don Rafael Ibarra, was falsely accused of infidelity and died in prison while under the control of Padre Damaso, a prominent and unethical priest. Determined to carry on his father's legacy, Ibarra intends to create an educational institution to educate Filipinos, thinking that knowledge leads the way toward change.</p>
+								<p class="mt-3"> Recognizing that María Clara is in fact Padre Damaso's illegitimate daughter complicates his love for the lovely and faithful woman. María Clara struggles with balancing her responsibilities to the church with her love for Ibarra. Ibarra gains more knowledge about the injustices that the people face with the support of Elias, a mystery revolutionary. However, he gets accused of rebellion and nearly killed because of a plot against him. With Elias' assistance, Ibarra manages to escape after María Clara is compelled to enter a convent, but he is believed to be dead.</p>
+							</section>
+						</div>
 
-					<!-- Post -->
-						<section class="post">
-							<header class="major">
-								<span class="date"></span>
-							</header>
-							<div class="image main"><img src="gomburza.jpg" alt="" /></div>
-							<p>El Filibusterismo (1891) - Rizal's second novel, commonly known as The Reign of Greed in English, revolves upon the main character of the Noli-El Fili duology, Crisóstomo Ibarra, who has returned for revenge as "Simoun". The novel's dark theme contrasts sharply with the previous novel's optimistic and passionate atmosphere, symbolizing Ibarra's resort to using violence to solve his country's problems after his previous attempts to reform the country's system failed and appeared impossible considering the Spaniards' corrupt perception of Filipinos. </p>
-							<p>While Noli Me Tangere has a romantic and sweet state, El Filibusterismo is the sequel. In the previous novel, Crisóstomo Ibarra, a reform-minded mestizo who wanted to open an educational institution in his hometown of San Diego and marry his childhood sweetheart, was wrongly accused of rebellion and assumed dead after escaping from prison in a gunfight. Thirteen years after the events of Noli Me Tangere, Crisóstomo Ibarra returns as Simoun, a wealthy and mysterious jeweler.</p>
-						    <p>He controls corrupt officials and high-profile individuals in order to cause chaos and encourage rebellion among the oppressed Filipinos. His ultimate plot involves a bomb buried in a lamp at a wedding celebration, which is intended to start an uprising. However, Basilio, a young scholar who had suffered at the hands of the friars, discovers the plot and notifies Isagani, the bride's boyfriend, Paulita Gómez. At the last moment, Isagani throws the lamp into the river, avoiding the explosion.</p>
-				            <p>Simoun, who is now a fugitive, takes protection with Padre Florentino, who is a devoted priest. Severely pained and beaten he admits his misdeeds and shortcomings, complaining how his wrath resulted in nothing but pain. Before dying, he tosses his remaining possessions into the sea, signifying his lost ambition for independence.</p>
-						</section>
+						<!-- Main or page 2 pero naka page 1 id -->
 
-				</div>
+						<div id="page1" class="page-section hidden">
+							<section class="post">
+								<header class="major">
+									<span class="date"></span>
+									<h1><br/> EL FILIBUSTERISMO</h1>
+								</header>
+								<div class="image page1"><img src="gomburza.jpg" alt="" /></div>
+								<p class="mt-3"><span class="font-bold">El Filibusterismo (1891)</span>- Rizal's second novel, commonly known as The Reign of Greed in English, revolves upon the main character of the Noli-El Fili duology, Crisóstomo Ibarra, who has returned for revenge as "Simoun". The novel's dark theme contrasts sharply with the previous novel's optimistic and passionate atmosphere, symbolizing Ibarra's resort to using violence to solve his country's problems after his previous attempts to reform the country's system failed and appeared impossible considering the Spaniards' corrupt perception of Filipinos. </p>
+								<p class="mt-3">While Noli Me Tangere has a romantic and sweet state, El Filibusterismo is the sequel. In the previous novel, Crisóstomo Ibarra, a reform-minded mestizo who wanted to open an educational institution in his hometown of San Diego and marry his childhood sweetheart, was wrongly accused of rebellion and assumed dead after escaping from prison in a gunfight. Thirteen years after the events of Noli Me Tangere, Crisóstomo Ibarra returns as Simoun, a wealthy and mysterious jeweler.</p>
+								<p class="mt-3">He controls corrupt officials and high-profile individuals in order to cause chaos and encourage rebellion among the oppressed Filipinos. His ultimate plot involves a bomb buried in a lamp at a wedding celebration, which is intended to start an uprising. However, Basilio, a young scholar who had suffered at the hands of the friars, discovers the plot and notifies Isagani, the bride's boyfriend, Paulita Gómez. At the last moment, Isagani throws the lamp into the river, avoiding the explosion.</p>
+								<p class="mt-3">Simoun, who is now a fugitive, takes protection with Padre Florentino, who is a devoted priest. Severely pained and beaten he admits his misdeeds and shortcomings, complaining how his wrath resulted in nothing but pain. Before dying, he tosses his remaining possessions into the sea, signifying his lost ambition for independence.</p>
+							</section>
+						</div>
+									
+							<!-- Page 5 -->
+							<div id="page5" class="page-section hidden">
+								<section class="post">
+									<header class="major">
+										<span class="date"></span>
+										<h1 class="text-6xl font-extrabold tracking-wide text-gray-900 uppercase text-center mb-10">
+											RIZAL WORKS:<br/> ESSAYS AND ARTICLES
+										</h1>    
+							
+										<p class="mt-4 text-lg text-center">
+											Through his essays and articles, Rizal exposed social injustices, advocated for reforms,<br />
+											and inspired Filipinos to strive for national dignity and progress.<br />
+										</p>                                        
+									</header>
+							
+									<div class="image main">
+										<img src="images/The Indolence of the Filipino.jpg" alt="El Filibusterismo Cover" />
+									</div>
+							
+									<h1 class="text-4xl font-bold mt-8">ESSAYS</h1>
+							
+									<p class="mt-3"><span class="font-bold">The Indolence of the Filipinos (La Indolencia de los Filipinos) (1890)</span></p>
+							
+									<p class="mt-3 text-lg">
+										Rizal disproved colonial accusations about Filipino indolence by showing this behavior developed because Spanish colonial rule limited access to education and economic possibilities alongside national identity development. 
+										According to Rizal, laziness developed from the colonial conditions that Spanish colonizers established in the Philippines.
+									</p>
+							
+									<p class="mt-3 text-lg">
+										Rizal demonstrated that Filipinos previously displayed diligence while conducting trade activities and participating in farming operations and handicraft production. 
+										The Spanish oppression through **polo y servicios** labor system combined with excessive taxation and land seizures discouraged Filipino workers from being productive. 
+										The people lost their drive due to excessive oppression by Spanish officials combined with their friars' mistreatment of Filipino workers.
+									</p>
+							
+									<p class="mt-3 text-lg">
+										The writer analyzed how the educational system together with the Church contributed to spreading ignorance among people. 
+										Rizal denounced the insufficient educational institutions and banned literature and ecclesiastical control of information because these factors restricted Filipino intellectual growth and economic progress. 
+										Under his view, education together with chances for progress must precede Filipino prosperity.
+									</p>
+							
+									<p class="mt-3 text-lg">
+										Rizal concluded his argument by stating the Spanish government must change its approach by giving power to Filipinos rather than accusing them of laziness. 
+										He demanded better educational facilities together with farm and industrial prospects as well as more respectful treatment of Filipinos. 
+										Rizal's essay showed Filipino people needed change and justice to prove their alleged laziness resulted from historical oppression instead of racial background.
+									</p>
+								</section>
+							</div>
 
-	
+							<div id="page6" class="page-section hidden">
+								<section class="post">
+									<header class="major">
+										<span class="date"></span>
+										<h1 class="text-6xl font-extrabold tracking-wide text-gray-900 uppercase text-center mb-10">
+											RIZAL WORKS:<br/> ESSAYS AND ARTICLES
+										</h1>    
+							
+										<p class="mt-4 text-lg text-center">
+											Through his essays and articles, Rizal exposed social injustices, advocated for reforms,<br />
+											and inspired Filipinos to strive for national dignity and progress.<br />
+										</p>                                        
+									</header>
+							
+									<div class="image main"><img src="images/The Philippines a Century Hence.png" alt="The Philippines a Century Hence Cover" /></div>
+							
+									<p class="mt-3"><span class="font-bold">The Philippines a Century Hence (Filipinas Dentro de Cien Años) (1889-1890)</span></p>
+							
+									<p class="mt-3 text-lg">
+										Rizal challenged Spanish claims about Filipino laziness through his argument that continual Spanish oppression had stripped Filipinos of intellectual pursuits and economic advancement, thus blocking their growth as a nation. According to Rizal, Filipino laziness developed because of how the colonizers controlled their society.
+									</p>
+							
+									<p class="mt-3 text-lg">
+										According to Rizal, Filipino society demonstrated industrious behavior through trade activities and agricultural involvement, as well as skilled craftsmanship during pre-Spanish times. The Spanish regime implemented <b>polo y servicios</b> alongside excessive taxation and land seizure to force Filipino people into servitude, thus diminishing their productive capability. Spanish officials and friars who mistreated Filipino workers contributed to diminishing local people's willingness to work.
+									</p>
+							
+									<p class="mt-3 text-lg">
+										The piece examined how both the education system and religious institutions helped create ignorance within Philippine society. Rizal criticized Spain's insufficient educational institutions and its restrictive book policies and church control of knowledge because these measures stopped Filipino intellectual and economic advancement. According to his belief, the Filipino people would not achieve prosperity unless they received proper education alongside access to opportunities.
+									</p>
+							
+									<p class="mt-3 text-lg">
+										Rizal maintained that Filipinos faced no laziness warranting blame but instead needed reforms from Spanish authorities to enhance their power. He pushed for improved education together with enhanced industrial agriculture and humane Filipino treatment. Rizal demonstrated in this piece that Filipino "indolence" stemmed from historical oppression, showing the need for transformation and justice, revealing the misconception about Filipino racial characteristics.
+									</p>
+								</section>
+							</div>
+							
+							
+
+
+<footer class="mt-8 mb-12 flex justify-center">
+    <div class="bg-white shadow-lg rounded-lg px-6 py-3">
+        <div class="flex justify-center items-center space-x-2">
+            <a href="#" id="prevPage" class="px-3 py-1.5 text-gray-500 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">
+                Previous
+            </a>
+            <a href="#main" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors" data-target="main">1</a>
+            <a href="#page1" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors" data-target="page1">2</a>
+            <a href="#page5" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors" data-target="page5">5</a>
+            <a href="#page6" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors" data-target="page6">6</a>
+            <a href="#" id="nextPage" class="px-3 py-1.5 text-gray-500 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">
+                Next
+            </a>
+        </div>
+    </div>
+</footer>
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -88,4 +467,77 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const sections = document.querySelectorAll(".page-section");
+			const pageLinks = document.querySelectorAll(".pagination-btn");
+			const prevButton = document.getElementById("prevPage");
+			const nextButton = document.getElementById("nextPage");
+			const pageIds = Array.from(sections).map(section => section.id);
+			let currentPage = 0;
+		
+			function updatePagination() {
+				sections.forEach((section, index) => {
+					section.classList.toggle("hidden", index !== currentPage);
+				});
+		
+				pageLinks.forEach((link, index) => {
+					if (index === currentPage) {
+						link.classList.add("bg-blue-600", "text-white");
+						link.classList.remove("text-gray-600");
+					} else {
+						link.classList.remove("bg-blue-600", "text-white");
+						link.classList.add("text-gray-600");
+					}
+				});
+		
+				prevButton.classList.toggle("text-gray-300", currentPage === 0);
+				nextButton.classList.toggle("text-gray-300", currentPage === sections.length - 1);
+		
+				// Update URL hash
+				window.location.hash = "#" + pageIds[currentPage];
+			}
+		
+			function goToPage(id) {
+				const index = pageIds.indexOf(id);
+				if (index !== -1) {
+					currentPage = index;
+					updatePagination();
+				}
+			}
+		
+			pageLinks.forEach((link, index) => {
+				link.addEventListener("click", (e) => {
+					e.preventDefault();
+					goToPage(link.getAttribute("data-target"));
+				});
+			});
+		
+			prevButton.addEventListener("click", (e) => {
+				e.preventDefault();
+				if (currentPage > 0) {
+					currentPage--;
+					updatePagination();
+				}
+			});
+		
+			nextButton.addEventListener("click", (e) => {
+				e.preventDefault();
+				if (currentPage < sections.length - 1) {
+					currentPage++;
+					updatePagination();
+				}
+			});
+		
+			// Load correct page on refresh
+			const hash = window.location.hash.substring(1);
+			if (hash && pageIds.includes(hash)) {
+				goToPage(hash);
+			} else {
+				updatePagination(); // Default to first page
+			}
+		});
+		</script>
+		
+
 </html>
