@@ -194,6 +194,27 @@ a.image:hover img {
     display: block;
 }
 			.hidden {
+#nav .links li {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8B5E34; /* Brown background */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+#nav .links li a {
+    text-decoration: none;
+    color: white; /* Default text color */
+}
+
+#nav .links li.active {
+    background-color: white; /* Highlight background */
+}
+
+#nav .links li.active a {
+    color: black; /* Highlighted text color */
+}
 			display: none;
 		}
 			</style>
@@ -213,16 +234,12 @@ a.image:hover img {
 
 				<!-- Nav -->
 					<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="index.html">Homepage</a></li>
-							<li><a href="generic.html">Works</a></li>
-							<li class="active"><a href="elements.html">Analysis</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-							<li><a href="references.html">References</a></li>
-						</ul>
-						
-					</nav>
+					<ul id="nav" class="links">
+   					 <li><a href="works.html" class="nav-link" data-page="works">Works</a></li>
+    					<li><a href="analysis.html" class="nav-link" data-page="analysis">Analysis</a></li>
+   					 <li><a href="gallery.html" class="nav-link" data-page="gallery">Gallery</a></li>
+					</ul>
+
 
 				<!-- Main or page 1-->
 					<!-- Content Sections -->
