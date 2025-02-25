@@ -38,7 +38,13 @@
                         <li class="active"><a href="generic.html">Rizal Works</a></li>
                         <li><a href="elements.html">Elements Reference</a></li>
                     </ul>
-                
+                    <ul class="icons">
+                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </nav>
 
 				<!-- Main -->
 					<div id="main">
@@ -224,22 +230,23 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 <script>  
-const pages = ["generic.html", "generic.html?page1", "page3.html"];
 document.addEventListener("DOMContentLoaded", function () {
     const pageLinks = document.querySelectorAll(".pagination-btn");
     const prevButton = document.getElementById("prevPage");
     const nextButton = document.getElementById("nextPage");
 
-    // Define page order (adjust as needed)
+    // Define the page order, including query parameters
     const pages = ["generic.html", "generic.html?page1", "page3.html"];
 
-    // Get current page from URL
-    let currentPage = window.location.href.split("/").pop() || "generic.html";
-    if (currentPage.includes("?")) {
-        currentPage = currentPage.split("?")[0] + "?" + currentPage.split("?")[1]; // Preserve query params
+    // Get current URL (filename + query parameters)
+    let currentPage = window.location.pathname.split("/").pop() + window.location.search;
+
+    // If on the root or no query params, default to "generic.html"
+    if (currentPage === "/" || currentPage === "") {
+        currentPage = "generic.html";
     }
 
-    // Get current index in the page array
+    // Get current page index
     let currentIndex = pages.indexOf(currentPage);
 
     function updateActivePage() {
@@ -273,7 +280,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function showCorrectPage() {
+        const sections = document.querySelectorAll(".page-section");
+        sections.forEach(section => section.classList.add("hidden")); // Hide all sections
+
+        if (window.location.search.includes("page1")) {
+            document.getElementById("page1").classList.remove("hidden"); // Show Page 2
+        }
+    }
+
     updateActivePage();
+    showCorrectPage();
 });
 
 
