@@ -11,70 +11,46 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		 <style>
+		  <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #f4f4f4;
         }
-
-        #wrapper {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        nav ul li.active a {
-            font-weight: bold;
-        }
-
         .content {
-            background-color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        .content h2 {
-            color: #333;
+        h2 {
+            text-align: center;
         }
-
-        .content p {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+        .section {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #fafafa;
+            border-left: 4px solid #007bff;
         }
-
-        .content .question {
-            font-weight: bold;
-            color: #444;
+        .section p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                padding: 15px;
+            }
+            .section p {
+                font-size: 14px;
+            }
         }
     </style>
 	</head>
