@@ -11,6 +11,7 @@
 	#wrapper {
 		
 		background-image: url("bgbg.jpg");
+		background-color: brown;
 		background-size: auto,								auto,														100% auto;
 		background-position: center,								center,														top center;
 		background-repeat: repeat,								no-repeat,													no-repeat;
