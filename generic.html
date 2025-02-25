@@ -277,18 +277,18 @@ a.image:hover img {
 <footer class="mt-8 mb-12 flex justify-center">
     <div class="bg-white shadow-lg rounded-lg px-6 py-3">
         <div class="flex justify-center items-center space-x-2">
-            <a href="#" id="prevPage" class="px-3 py-1.5 text-gray-500 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">
-                Previous
-            </a>
-            <a href="#main" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors" data-target="main">1</a>
-            <a href="#page1" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors" data-target="page1">2</a>
-			<a href="page3.html" onclick="event.preventDefault(); window.location.href='page3.html';" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">
+			<a href="#" id="prevPage" class="px-3 py-1.5 text-gray-500 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">
+				Previous
+			</a>
+			<a href="#" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors" data-target="main">1</a>
+			<a href="#" class="pagination-btn px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors" data-target="page1">2</a>
+
+			<a href="page3.html" class="px-3.5 py-1.5 text-gray-600 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">
 				3
 			</a>
-			
-            <a href="#" id="nextPage" class="px-3 py-1.5 text-gray-500 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">
-                Next
-            </a>
+			<a href="#" id="nextPage" class="px-3 py-1.5 text-gray-500 hover:text-blue-600 rounded-lg hover:bg-gray-100 transition-colors">
+				Next
+			</a>
         </div>
     </div>
 </footer>
@@ -305,75 +305,80 @@ a.image:hover img {
 
 	</body>
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			const sections = document.querySelectorAll(".page-section");
-			const pageLinks = document.querySelectorAll(".pagination-btn");
-			const prevButton = document.getElementById("prevPage");
-			const nextButton = document.getElementById("nextPage");
-			const pageIds = Array.from(sections).map(section => section.id);
-			let currentPage = 0;
-		
-			function updatePagination() {
-				sections.forEach((section, index) => {
-					section.classList.toggle("hidden", index !== currentPage);
-				});
-		
-				pageLinks.forEach((link, index) => {
-					if (index === currentPage) {
-						link.classList.add("bg-blue-600", "text-white");
-						link.classList.remove("text-gray-600");
-					} else {
-						link.classList.remove("bg-blue-600", "text-white");
-						link.classList.add("text-gray-600");
-					}
-				});
-		
-				prevButton.classList.toggle("text-gray-300", currentPage === 0);
-				nextButton.classList.toggle("text-gray-300", currentPage === sections.length - 1);
-		
-				// Update URL hash
-				window.location.hash = "#" + pageIds[currentPage];
-			}
-		
-			function goToPage(id) {
-				const index = pageIds.indexOf(id);
-				if (index !== -1) {
-					currentPage = index;
-					updatePagination();
-				}
-			}
-		
-			pageLinks.forEach((link, index) => {
-				link.addEventListener("click", (e) => {
-					e.preventDefault();
-					goToPage(link.getAttribute("data-target"));
-				});
-			});
-		
-			prevButton.addEventListener("click", (e) => {
-				e.preventDefault();
-				if (currentPage > 0) {
-					currentPage--;
-					updatePagination();
-				}
-			});
-		
-			nextButton.addEventListener("click", (e) => {
-				e.preventDefault();
-				if (currentPage < sections.length - 1) {
-					currentPage++;
-					updatePagination();
-				}
-			});
-		
-			// Load correct page on refresh
-			const hash = window.location.hash.substring(1);
-			if (hash && pageIds.includes(hash)) {
-				goToPage(hash);
-			} else {
-				updatePagination(); // Default to first page
-			}
-		});
+	document.addEventListener("DOMContentLoaded", function () { 
+    const sections = document.querySelectorAll(".page-section");
+    const pageLinks = document.querySelectorAll(".pagination-btn");
+    const prevButton = document.getElementById("prevPage");
+    const nextButton = document.getElementById("nextPage");
+
+    // Force an explicit page order (since both use "page1")
+    const pageOrder = ["main", "page1"];  // "page1" here refers to the second section
+
+    let currentPageIndex = 0;
+
+    function updatePagination() {
+        sections.forEach((section, index) => {
+            section.classList.toggle("hidden", index !== currentPageIndex);
+        });
+
+        pageLinks.forEach((link, index) => {
+            if (index === currentPageIndex) {
+                link.classList.add("bg-blue-600", "text-white");
+                link.classList.remove("text-gray-600");
+            } else {
+                link.classList.remove("bg-blue-600", "text-white");
+                link.classList.add("text-gray-600");
+            }
+        });
+
+        prevButton.classList.toggle("text-gray-300", currentPageIndex === 0);
+        nextButton.classList.toggle("text-gray-300", currentPageIndex === sections.length - 1);
+    }
+
+    function goToPage(targetId) {
+        let newIndex = pageOrder.indexOf(targetId);
+        if (newIndex !== -1) {
+            currentPageIndex = newIndex;
+            updatePagination();
+        }
+    }
+
+	pageLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        const target = link.getAttribute("data-target");
+        
+        // Skip JS if no data-target (like Page 3)
+        if (!target) return;  
+
+        e.preventDefault();
+        goToPage(target);
+    });
+});
+
+    prevButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (currentPageIndex > 0) {
+            currentPageIndex--;
+            updatePagination();
+        }
+    });
+
+    nextButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (currentPageIndex < pageOrder.length - 1) {
+            currentPageIndex++;
+            updatePagination();
+        }
+    });
+
+    // Load correct page on refresh
+    const hash = window.location.hash.substring(1);
+    if (hash && pageOrder.includes(hash)) {
+        goToPage(hash);
+    } else {
+        updatePagination(); // Default to first page
+    }
+});
 		</script>
 		
 
