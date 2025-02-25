@@ -37,8 +37,8 @@
 
 						<style>
 							/* General Styles */
-							body {
-    font-family: Arial; /* Ensures only Arial is used */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background: url('bgbg.jpg') no-repeat center center fixed;
@@ -57,52 +57,83 @@
     font-size: 18px;
     line-height: 1.6;
     font-style: normal; /* Removes any italic formatting */
-        }
+}
 
-        /* Slideshow Styles */
-        .slideshow-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 540px; /* Adjusted height */
-            position: relative;
-            overflow: hidden;
-            max-width: 800px; /* Increased width */
-            margin: 20px auto;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-        }
+/* Slideshow Styles */
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 90%; /* Makes it responsive */
+    max-width: 800px; /* Prevents excessive stretching */
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintains aspect ratio */
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
 
-        .slide {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    object-fit: cover; /* Ensures images fit properly */
+}
 
-        .slide.active {
-            opacity: 1;
-            position: relative;
-        }
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
 
-        /* Copyright Section */
-        #copyright {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #555;
-        }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .major p {
+        font-size: 16px;
+    }
 
-        #copyright a {
-            color: #0073e6;
-            text-decoration: none;
-        }
+    .slideshow-container {
+        width: 100%;
+        max-width: 600px;
+        aspect-ratio: 16 / 9;
+    }
+}
 
-        #copyright a:hover {
-            text-decoration: underline;
-        }
-    </style>
+@media (max-width: 480px) {
+    .major p {
+        font-size: 14px;
+    }
+
+    .slideshow-container {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* Copyright Section */
+#copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+#copyright a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+#copyright a:hover {
+    text-decoration: underline;
+}
 					</head>
 					<body>
 
